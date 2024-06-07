@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Anime.js</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <section>
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quae! Vero, fugiat mollitia
+            sunt facilis unde est ratione, aliquid quod, architecto facere quisquam adipisci quasi omnis quo magni
+            dignissimos eligendi nam impedit! Deserunt optio mollitia recusandae? Officia, exercitationem eos. Odio,
+            officia officiis porro ad dignissimos laudantium repellendus magni sunt, doloremque id esse sequi soluta
+            corporis, corrupti quis repudiandae. Non optio eveniet ratione qui, nemo voluptatem provident eaque illo
+            quod voluptatibus cumque aliquam dicta necessitatibus harum tempore quam asperiores suscipit delectus, iste
+            odit rerum aspernatur
+        </p>
+    </section>
+
+
+
+    <!-- jquery -->
+    <script src="jquery.js"></script>
+    <!-- anime.js -->
+    <script src="anime.js"></script>
+
+    <script>
+        const text = document.querySelector('.text');
+        text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+
+        const animation = anime.timeline({
+            targets: '.text span',
+            easing : 'easeInOutExpo',
+            loop: false , 
+        });
+        animation
+            .add({
+                rotate: function(){
+                    return anime.random(-360, 360)
+                }, 
+                translateX: function(){
+                    return anime.random(-500, 500)
+                },  
+                translateY: function(){
+                    return anime.random(-500, 500)
+                }, 
+                duration: 3000, 
+                delay: anime.stagger(20),
+            })
+            .add({
+                rotate: 0, 
+                translateX: 0,  
+                translateY: 0, 
+                duration: 3000, 
+                delay: anime.stagger(20),
+            })
+    </script>
+</body>
+
+</html>

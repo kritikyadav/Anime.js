@@ -1,0 +1,21 @@
+body
+{
+    background-color: black;
+}
+
+.keyframes .square{
+    color: red;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+}
+
+.keyframes{
+    display: block;
+    width: auto;
+    height: 50%;
+    position: absolute;
+    top: 10%;
+    left: 50%
+    
+}

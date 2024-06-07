@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Anime.js</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div class="demo-wrapper " >
+        <div class="square"></div>
+    </div>
+    <div class="inputDom my-5 px-5">
+        <input type="text" id="InputDom">
+    </div>
+
+
+    <!-- jquery -->
+    <script src="jquery.js"></script>
+    <!-- anime.js -->
+    <script src="anime.js"></script>
+
+    <script type="text/javascript">
+        anime({
+            targets: '.demo-wrapper .square',
+            translateX: 250,
+            rotateZ: 360,
+            scale: 3,
+            duration: 3000,
+            loop: true
+        });
+        anime({
+            targets: '#InputDom',
+            value: [0, 1000],
+            round: 1,
+            easing: 'linear',
+            loop: true,
+            direction: 'alternate',
+            duration: 5000,
+
+        });
+    </script>
+</body>
+
+</html>

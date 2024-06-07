@@ -1,0 +1,21 @@
+body
+{
+    background-color: black;
+}
+
+.demo-wrapper .square{
+    display: inline-block;
+    color: red;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    margin: 1px;
+}
+
+.demo-wrapper{
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+       
+}

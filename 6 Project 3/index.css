@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+
+section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(8, 0, 39);
+    overflow: hidden;
+
+}
+
+section .text{
+    position: relative;
+    text-align: center;
+    color: aqua;
+    margin: 40px;
+    max-width: 700px;
+}
+section .text span{
+    position: relative;
+    display: inline-block;
+}

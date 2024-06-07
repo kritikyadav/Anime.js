@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Anime.js</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div class="demo-wrapper">
+        <div class="row">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+        <div class="row">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+        <div class="row">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+        <div class="row">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+        <div class="row">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+
+
+    </div>
+
+    <!-- jquery -->
+    <script src="jquery.js"></script>
+    <!-- anime.js -->
+    <script src="anime.js"></script>
+
+    <script type="text/javascript">
+        var animation = anime({
+            targets: '.square', background: '#FFF',
+            translateX: anime.stagger(10 ,{grid:[14,5], from:'center' , axis:'x'}),
+            translateY: anime.stagger(10 ,{grid:[14,5], from:'center' , axis:'y'}),
+            rotateZ: anime.stagger(200 ,{grid:[14,5], from:'center', axis:'x' }),
+            delay: anime.stagger( 200, {grid:[14,5], from:'center'}),
+            // delay: anime.stagger(10,{from:'last'}),
+            // delay: function (el, i, l) {
+            //     return i * 100;
+            // },
+            // endDelay: function (el, i, l) {
+            //     return (l - i) * 100;
+            // },
+            // duration: 3000,
+            // borderRadius: ['0%', '50%'],
+            direction: 'alternate',
+            easing: 'easeInOutQuad',
+            loop: true,
+
+            // update: function (anim) {
+            //     progressLogEl.value = 'progress : ' + Math.round(anim.progress) + '%';
+            //     beginLogEl.value = 'began : ' + anim.began;
+            //     completeLogEl.value = 'completed : ' + anim.completed;
+            // },
+            // begin: function (anim) {
+            //     beginLogEl.value = 'began : ' + anim.began;
+            // },
+            // complete: function (anim) {
+            //     completeLogEl.value = 'completed : ' + anim.completed;
+            // }
+            
+        });
+
+        // document.querySelector('.reverse-anim-demo .play').onclick = animation.play;
+        // document.querySelector('.reverse-anim-demo .pause').onclick = animation.pause;
+        // document.querySelector('.reverse-anim-demo .restart').onclick = animation.restart;
+        // document.querySelector('.reverse-anim-demo .reverse').onclick = animation.reverse;
+
+        // var seekProgressEl = document.querySelector('.seek-anim-demo .progress');
+        //     seekProgressEl.oninput = function () {
+        //         animation.seek(animation.duration * (seekProgressEl.value / 100));
+        //     };
+
+    </script>
+</body>
+
+</html>

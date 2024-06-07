@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+
+}
+
+section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+
+}
+
+section .text{
+    position: relative;
+    font-size: 6em;    
+    text-align: center;
+    color: aqua;
+    -webkit-box-reflect: below -0.46em linear-gradient(transparent, #0004);
+}
+section .text span{
+    position: relative;
+    display: inline-block;
+}

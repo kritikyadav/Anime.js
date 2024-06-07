@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Anime.js</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h2><span>Hey Kritik Yadav</span><br>WELCOME</h2>
+    </div>
+    
+    <!-- jquery -->
+    <script src="jquery.js"></script>
+    <!-- anime.js -->
+    <script src="anime.js"></script>
+
+    <script>
+        const container = document.querySelector('.container');
+        for(var i = 0 ; i<= 100 ; i++){
+            const blocks = document.createElement('div');
+            blocks.classList.add('block');
+            container.appendChild(blocks);
+        }
+        function animateBlock(){
+            anime({
+                targets: '.block',
+                translateX: function(){
+                    return anime.random(-1000, 1000);
+                }, 
+                translateY: function(){
+                    return anime.random(-500, 500);
+                }, 
+                scale: function(){
+                    return anime.random(1,5);
+                },
+                easing: 'linear',
+                duration: 3000, 
+                complete: animateBlock, 
+            })
+        };
+        animateBlock();
+    </script>
+</body>
+
+</html>
